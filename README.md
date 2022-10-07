@@ -8,10 +8,10 @@ Files for my AWS CDK workshop
 	- CloudFormation
 	- Tools and commands:
 		- npm, npx, cdk
-		- init, list, synth, diff , apply
+		- init, list, synth, diff , deploy
 - Under the hood
 	- jsii
-	- synth, diff and apply
+	- synth, diff and deploy
 - Development
 	- Languages
 	- File structure
@@ -53,7 +53,7 @@ Files for my AWS CDK workshop
 	- Copy code examples (tbd) from this repo to the CDK project
 	- Edit files as needed
 	- Do a `cdk diff`
-	- If everything looks good do a `cdk apply`
+	- If everything looks good do a `cdk deploy`
 7. Leading Practices
 8. Hands-on part 4
 	- Refactor CDK application
