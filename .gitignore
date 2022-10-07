@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Custom files
-.gitignore_local
+.gitignore.local
