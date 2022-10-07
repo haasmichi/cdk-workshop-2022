@@ -37,6 +37,7 @@ Files for my AWS CDK workshop
 ### Assumptions / TODO before workshop
 - A valid AWS Account has been created and the user has access via Web UI and CLI (Poweruser permissions)
 - AWS CLI v2 has been installed in advance and an
+- For a working CDK Pipeline a CodeBuild Connection to Github has to be established
 
 1. Basics
 2. Hands-on part 1
