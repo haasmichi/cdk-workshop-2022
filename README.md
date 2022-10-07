@@ -16,10 +16,11 @@ Files for my AWS CDK workshop
 	- Languages
 	- File structure
 	- Apps, Stacks, Constructs and their levels
-- Common Practices
+- Leading Practices
 	- Development
 	- Organizing code
 	- Assets
+	- Grants
 	- CI/CD Pipelines
 	- Multi-Account/Region/Environment Setups
 - Further Information
@@ -53,7 +54,7 @@ Files for my AWS CDK workshop
 	- Edit files as needed
 	- Do a `cdk diff`
 	- If everything looks good do a `cdk apply`
-7. Common Practices
+7. Leading Practices
 8. Hands-on part 4
 	- Refactor CDK application
 		- Create asset folder and place Lambda Function
