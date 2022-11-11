@@ -45,6 +45,7 @@ class CdkWorkshopPipeline(cdk.Stack):
                                                     trigger_branch,
                                                     connection_arn=f"arn:aws:codestar-connections:{self.region}:{self.account}:connection/{github_code_pipeline_connection_uuid}"),
                                                 commands=[
+                                                    "cd code/cdk-workshop"
                                                     "npm install -g aws-cdk",
                                                     "python -m pip install --upgrade pip",
                                                     "python -m pip install -r requirements.txt",
