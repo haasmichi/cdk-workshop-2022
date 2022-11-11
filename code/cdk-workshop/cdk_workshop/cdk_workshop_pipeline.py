@@ -45,9 +45,8 @@ class CdkWorkshopPipeline(cdk.Stack):
                                                     trigger_branch,
                                                     connection_arn=f"arn:aws:codestar-connections:{self.region}:{self.account}:connection/{github_code_pipeline_connection_uuid}"),
                                                 commands=[
+                                                    # Dirty hack, since our CDK app resides in a subfolder of our repo
                                                     "cd code/cdk-workshop",
-                                                    "pwd",
-                                                    "ls -lAh",
                                                     "npm install -g aws-cdk",
                                                     "python -m pip install --upgrade pip",
                                                     "python -m pip install -r requirements.txt",
