@@ -1,3 +1,25 @@
+# Prerequisites  
+## Github connection  
+For the CDK Pipeline to work, you need to add a connection to your Github repository in AWS Code Pipeline settings.
+
+## Environment variables  
+This CDK application requires some environment variables to be set in order to work.
+```
+### AWS
+export AWS_PROFILE="poweruser@myworkshopaccount"  # The name of the AWS CLI profile 
+export AWS_ACCOUNT_ID="123456789012"              # The AWS Account ID, the resources will be deployed to
+export AWS_ACCOUNT_ALIAS="poweruser@example.com"  # Your AWS Account Alias
+
+# Some vars mainly for tagging
+export CONTACT_TECH="poweruser@example.com"
+export CONTACT_BUSINESS="some.sponsor@example.com"
+
+# Github
+export STACK_REPO="github_handle/repo_name"
+export GITHUB_CODE_PIPELINE_CONNECTION_UUID="a1a3e2b8-6e7d-4f6b-9580-b59abd76e0c2" # CHANGETHAT
+```
+
+---
 
 # Welcome to your CDK Python project!
 
