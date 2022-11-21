@@ -1,0 +1,9 @@
+# AWS
+export AWS_PROFILE="poweruser@SHORTNAME"
+export AWS_ACCOUNT_ID=""
+export AWS_ACCOUNT_ALIAS="@btelligent.com"
+
+# Basic vars mainly for tagging
+export CONTACT_TECH="@btelligent.com"
+export CONTACT_BUSINESS="@btelligent.com"
+
