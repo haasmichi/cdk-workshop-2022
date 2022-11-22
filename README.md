@@ -15,7 +15,7 @@ Install the AWS CLI v2 following [these instructions](https://docs.aws.amazon.co
 
 ### AWS Account
 
-An AWS Account should have been created for you, already. You can access it via our [landing page](https://btelligent.awsapps.com/start).
+An AWS Account called "CdkXX Trining Account" should have been created for you, already. You can access it via our [landing page](https://btelligent.awsapps.com/start).
 Try to login using your AD credentials and assume the role, "BtPowerUserAccessCustomizable" (click on `Management console`).
 On the landing page click `Command line or programmatic access` and copy the AWS account id (2nd row).
 
