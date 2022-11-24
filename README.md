@@ -4,18 +4,32 @@
 Before attending the workshop some preparation has to be made.  
 The installation instructions have been tested on MacOS and WSL2.
 
+### WSL2 (Windows)
+If you are running Windows as OS, activate / install Windows Subsystem for Linux v2 (WSL2) via the software distribution system. 
+Ubuntu as a WSL2 distribution has been tested. Debian should also work.
+The rest of the needed software should be installed into your WSL2 environment.
+
 ### Install Python
 
 Install a current Python version using packages from [python.org](https://www.python.org/) or using your package manager.  
 Note: Anaconda distributions are not tested or known to work when doing the workshop.
 
+WSL2: `sudo apt update && sudo apt install python3 python3-venv python3-pip python3-setuptools -y`
+
 ### Install AWS CLI
 
 Install the AWS CLI v2 following [these instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
+WSL2:
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
 ### AWS Account
 
-An AWS Account called "CdkXX Trining Account" should have been created for you, already. You can access it via our [landing page](https://btelligent.awsapps.com/start).
+An AWS Account called "CdkXX Training Account" should have been created for you, already. You can access it via our [landing page](https://btelligent.awsapps.com/start).
 Try to login using your AD credentials and assume the role, "BtPowerUserAccessCustomizable" (click on `Management console`).
 On the landing page click `Command line or programmatic access` and copy the AWS account id (2nd row).
 
@@ -23,7 +37,7 @@ On the landing page click `Command line or programmatic access` and copy the AWS
 
 Add a new profile to your AWS CLI configuration file by editing ~/.aws/config
 ```
-[profile poweruser@$SHORTNAME]
+[profile $SHORTNAME@cdkws]
 sso_start_url = https://btelligent.awsapps.com/start
 sso_region = eu-central-1
 sso_account_id = $ACCOUNT_ID
@@ -31,16 +45,16 @@ sso_role_name = BtPowerUserAccessCustomizable
 region = eu-central-1
 output = json
 ```
-$SHORTNAME is the b.telligent common four letter abbreviation of your name, like sifu.  
+$SHORTNAME is the b.telligent common four letter abbreviation of your name, like sifu.
 The $ACCOUNT_ID is the one you have copied in the previous step.
 
-Note: You can name the profile, whatever you want. poweruser@$SHORTNAME is just a suggestion.
+Note: You can name the profile, whatever you want. $SHORTNAME@cdkws is just a suggestion.
 
 ### Test programmatic access
 
 In your terminal application do
 ```
-export AWS_PROFILE=poweruser@$SHORTNAME
+export AWS_PROFILE=$SHORTNAME@cdkws
 aws sso login
 ```
 Your browser should open a window requesting app authorization. Click `Allow`.  
@@ -70,6 +84,8 @@ v18.12.1
 npm --version
 8.19.2
 ```
+WSL2 (Ubuntu): `curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install -y nodejs`
+WSL2 (Debian as root): `curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && apt-get install -y nodejs`
 
 ### Install AWS CDK
 The AWS CDK comes as a node package. You can install it via npm.
